@@ -1,4 +1,5 @@
-  <div id="footer-wrapper">
+<div id="footer-wrapper">
+  <div id="footer">
     <div class="row">
       <?php if ($informations) { ?>
       <div class="col-sm-4">
@@ -42,9 +43,6 @@
         </ul>
       </div>
     </div>
-    <!--<hr>
-    <p><?php echo $powered; ?></p>-->
   </div>
-
 </div>
 </body></html>

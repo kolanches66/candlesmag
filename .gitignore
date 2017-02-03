@@ -1,2 +1,5 @@
 #ignore images
 image/
+
+#ignore NetBeans project files
+nbproject/

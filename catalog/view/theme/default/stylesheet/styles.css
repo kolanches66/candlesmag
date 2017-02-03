@@ -1,0 +1,249 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+body {
+	font-family: 'Verdana', sans;
+	font-weight: normal;
+}
+
+h3 
+{
+	margin-top: 0;
+}
+
+a {
+	color: #1483ff;
+	text-decoration: underline;
+}
+a:hover {
+	color: #ff4c08;
+	text-decoration: underline;
+}
+
+.link.red 
+{
+	color: #ff4c08;
+	text-decoration: underline;
+}
+.link.blue 
+{
+	color: #1483ff;
+	text-decoration: underline;
+}
+.link.blue:hover 
+{
+	color: #ff4c08;
+	text-decoration: underline;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#header-wrapper 
+{
+	margin: 15px auto 30px auto;
+	width: 960px;
+}
+	.header-wrapper--left 
+	{
+		float: left;
+		padding-top: 0px;
+		width: 320px;
+	}
+	.header-wrapper--left .logo 
+	{
+		margin-left: -25px;
+	}
+	.header-wrapper--center 
+	{
+		float: left;
+		margin-top: -8px;
+		padding-left: 20px;
+		padding-top: 0px;
+		width: 300px;
+	}
+		.header-wrapper--center .back-call 
+		{
+			font-size: 18px;
+			text-align: center;
+		}
+		.header-wrapper--center .phone 
+		{
+			background: url('/opencart/image/phone-bg.png') no-repeat;
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+			height: 29px;
+			margin: 10px auto 0 auto;
+			padding: 4px 0 0 60px;
+			width: 240px;
+		}
+	.header-wrapper--right 
+	{
+		float: right;
+		text-align: right;
+		padding-top: 0px;
+		width: 320px;
+	}
+		.header-wrapper--right .cart-wrapper 
+		{}
+			.cart-button 
+			{
+				background: url('/opencart/image/cart-button.png') no-repeat;
+				border: 0;
+				color: #fff;
+				font-size: 18px;
+				height: 47px;
+				outline: 0;
+				padding: 4px 0 0 25px;
+				width: 231px;
+			}
+			.cart-button:hover 
+			{
+				cursor: pointer;
+			}
+		.header-wrapper--right .for-customer
+		{
+			float: right;
+			margin-top: 10px;
+			padding: 0 7px;
+			
+		}
+			.header-wrapper--right .for-customer h4
+			{
+				font-size: 14px;
+				font-weight: normal;
+				margin: 3px 0 0 23px;
+				text-align: left;
+				width: 208px;
+			}
+			.header-wrapper--right .for-customer h4.links
+			{
+				font-size: 18px;
+			}
+		
+#menu-wrapper 
+{
+	background: #fff;
+	height: 40px;
+	margin-bottom: 5px;
+	width: 100%;
+}		
+	#menu 
+	{
+		background: 0;
+		font-size: 16px;
+		font-style: italic;
+		margin: 0 auto 0 auto;
+		width: 960px;
+	}
+	#menu ul 
+	{
+		list-style: none;
+		margin-top: 7px;
+		text-align: center;
+		padding-left: 20px;
+		width: auto;
+	}
+	#menu ul > li 
+	{
+		display: inline;
+		margin-right: 50px;
+	}
+	#menu ul > li > a 
+	{
+		color: #1483ff;
+		padding: 5px 15px;
+	}
+	#menu ul > li > a:hover
+	{
+		border-radius: 3px;
+		background: #ff4c08;
+		color: #fff;
+	}
+
+#content-wrapper 
+{
+	margin: 0 auto;
+	width: 960px;
+}
+
+#footer-wrapper
+{
+	margin: 0 auto;
+	text-align: center;
+	width: 960px;
+}
+
+
+/* list group */
+.list-group
+{
+
+}
+/* отключаем фон у пунктов каталога */
+a.list-group-item, a.list-group-item:hover, a.list-group-item:active,
+a.list-group-item.active, a.list-group-item.active:hover
+{
+	background: 0;
+}
+/* отключаем круглые края у 1-го и последнего */
+a.list-group-item:first-child, 
+a.list-group-item:last-child {
+	border-radius: 0;
+}
+a.list-group-item 
+{
+	border: 0;
+	color: #4b97ff;
+	font-size: 18px;
+	margin: 7px 0 15px 0;
+	padding: 0;
+	text-decoration: underline;
+}
+a.list-group-item:hover 
+{
+	color: #ff4c08;
+	text-decoration: underline;
+}
+a.list-group-item.active, a.list-group-item.active:hover
+{
+	color: #222;
+}
+a.list-group-item.sub
+{
+	background: url('/opencart/image/point.png') center left no-repeat;
+	font-size: 16px;
+	margin: 0 10px;
+	padding-left: 20px;
+}
+a.list-group-item.sub.active:hover
+{
+	background: url('/opencart/image/point.png') center left no-repeat;
+}
+
+
+.navigation {
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+.navigation .product-name {
+	font-size: 24px;
+	margin: 0;
+}
+
+#auth 
+{
+	margin: 0 auto;
+	width: 320px;
+}

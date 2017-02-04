@@ -19,7 +19,7 @@ class ControllerAccountAddress extends Controller {
 
 	}
 
-	/*public function add() {
+	public function add() {
 		if (!$this->customer->isLogged()) {
 			$this->session->data['redirect'] = $this->url->link('account/address', '', true);
 
@@ -58,13 +58,12 @@ class ControllerAccountAddress extends Controller {
 		}
 
 		$this->getForm();
-	}*/
+	}
 
-	// загружаем страницу для редактирования адреса
 	public function edit() {
 		if (!$this->customer->isLogged()) {
 			$this->session->data['redirect'] = $this->url->link('account/address', '', true);
-			// выкидываем юзера на страницу авторизации
+
 			$this->response->redirect($this->url->link('account/login', '', true));
 		}
 
@@ -78,15 +77,12 @@ class ControllerAccountAddress extends Controller {
 
 		$this->load->model('account/address');
 		
-		
-		// нажали кнопку сохранения изменений
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) 
-		{
-			$this->model_account_address->editAddress($this->request->post);
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+			$this->model_account_address->editAddress($this->request->get['address_id'], $this->request->post);
 
 			// Default Shipping Address
-			/*if (isset($this->session->data['shipping_address']['address_id']) && ($this->request->get['address_id'] == $this->session->data['shipping_address']['address_id'])) {
-				$this->session->data['shipping_address'] = $this->model_account_address->getAddress();
+			if (isset($this->session->data['shipping_address']['address_id']) && ($this->request->get['address_id'] == $this->session->data['shipping_address']['address_id'])) {
+				$this->session->data['shipping_address'] = $this->model_account_address->getAddress($this->request->get['address_id']);
 
 				unset($this->session->data['shipping_method']);
 				unset($this->session->data['shipping_methods']);
@@ -94,13 +90,13 @@ class ControllerAccountAddress extends Controller {
 
 			// Default Payment Address
 			if (isset($this->session->data['payment_address']['address_id']) && ($this->request->get['address_id'] == $this->session->data['payment_address']['address_id'])) {
-				$this->session->data['payment_address'] = $this->model_account_address->getAddress();
+				$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->request->get['address_id']);
 
 				unset($this->session->data['payment_method']);
 				unset($this->session->data['payment_methods']);
-			}*/
+			}
 
-			/*$this->session->data['success'] = $this->language->get('text_edit');
+			$this->session->data['success'] = $this->language->get('text_edit');
 
 			// Add to activity log
 			if ($this->config->get('config_customer_activity')) {
@@ -114,11 +110,9 @@ class ControllerAccountAddress extends Controller {
 				$this->model_account_activity->addActivity('address_edit', $activity_data);
 			}
 
-			$this->response->redirect($this->url->link('account/address', '', true));*/
+			$this->response->redirect($this->url->link('account/address', '', true));
 		}
-		// [ нажали кнопку сохранения изменений ]
 
-		// вывод формы
 		$this->getForm();
 	}
 
@@ -171,13 +165,11 @@ class ControllerAccountAddress extends Controller {
 
 		$this->getList();
 	}
-	
-	
 
 	protected function getList() {
 		$this->load->model('account/customer');
 		$data['customer_info'] = $this->model_account_customer->getCustomer($this->customer->getId());
-
+		
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
@@ -276,7 +268,7 @@ class ControllerAccountAddress extends Controller {
 	}
 
 	protected function getForm() {
-		/*$data['breadcrumbs'] = array();
+		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
@@ -303,9 +295,7 @@ class ControllerAccountAddress extends Controller {
 				'text' => $this->language->get('text_edit_address'),
 				'href' => $this->url->link('account/address/edit', 'address_id=' . $this->request->get['address_id'], true)
 			);
-		}*/
-		
-		// локализация
+		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -379,9 +369,7 @@ class ControllerAccountAddress extends Controller {
 			$data['error_custom_field'] = array();
 		}
 		
-		$data['action'] = $this->url->link('account/address/edit', '', true);
-		
-		/*if (!isset($this->request->get['address_id'])) {
+		if (!isset($this->request->get['address_id'])) {
 			$data['action'] = $this->url->link('account/address/add', '', true);
 		} else {
 			$data['action'] = $this->url->link('account/address/edit', 'address_id=' . $this->request->get['address_id'], true);
@@ -389,10 +377,7 @@ class ControllerAccountAddress extends Controller {
 
 		if (isset($this->request->get['address_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$address_info = $this->model_account_address->getAddress($this->request->get['address_id']);
-		}*/
-		
-		// получаем адрес для текущего пользователя
-		$address_info = $this->model_account_address->getAddress();
+		}
 
 		if (isset($this->request->post['firstname'])) {
 			$data['firstname'] = $this->request->post['firstname'];
@@ -553,7 +538,7 @@ class ControllerAccountAddress extends Controller {
 		return !$this->error;
 	}
 
-	/*protected function validateDelete() {
+	protected function validateDelete() {
 		if ($this->model_account_address->getTotalAddresses() == 1) {
 			$this->error['warning'] = $this->language->get('error_delete');
 		}
@@ -563,5 +548,5 @@ class ControllerAccountAddress extends Controller {
 		}
 
 		return !$this->error;
-	}*/
+	}
 }

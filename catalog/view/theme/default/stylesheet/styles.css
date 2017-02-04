@@ -34,23 +34,32 @@ a:hover {
 .link.blue 
 {
 	color: #1483ff;
-	text-decoration: underline;
+	text-decoration: dashed;
 }
 .link.blue:hover 
 {
 	color: #ff4c08;
+	cursor: pointer;
 	text-decoration: underline;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix:after 
+{
+	content: "";
+	display: table;
+	clear: both;
 }
 
+#mega-header-wrapper
+{
+    background: #e6f2ff;
+	box-shadow: 0px 3px 4px 0px rgba(25, 25, 25, 0.25);
+}   
 #header-wrapper 
 {
-	margin: 15px auto 30px auto;
+	margin: 0 auto 10px auto;
+	padding-bottom: 20px;
+	padding-top: 25px;
 	width: 960px;
 }
 	.header-wrapper--left 
@@ -133,9 +142,7 @@ a:hover {
 		
 #menu-wrapper 
 {
-	background: #fff;
-	height: 40px;
-	margin-bottom: 5px;
+	padding-top: 5px;
 	width: 100%;
 }		
 	#menu 
@@ -244,16 +251,16 @@ a.list-group-item.sub.active:hover
 }
 
 
-.navigation {
+.navigation 
+{
 	margin-bottom: 15px;
 	font-size: 16px;
 }
-
-.navigation .product-name {
+.navigation .product-name 
+{
 	font-size: 24px;
 	margin: 0;
 }
-
 #auth 
 {
 	margin: 0 auto;

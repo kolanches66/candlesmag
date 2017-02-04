@@ -51,17 +51,8 @@
 
 <div id="main-wrapper">
 	
-	<div id="menu-wrapper">
-		<div id="menu">
-		<ul>
-			<li><a href="<?=HTTP_SERVER?>">главная</a></li>
-			<?php foreach ($informations as $information) { ?>
-			<li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-			<?php } ?>
-			<li><a href="<?php echo $contact; ?>">обратная связь</a></li>
-		</ul>
-		</div>
-	</div>
+	<div id="mega-header-wrapper">
+		 
 
 	<div id="header-wrapper" class="clearfix">
 		<div class="header-wrapper--left">
@@ -70,7 +61,29 @@
 			</div>
 		</div>
 		<div class="header-wrapper--center">
-			<div class="back-call"><a class="link blue" href="#">заказать обратный звонок</a></div>
+			<div class="back-call"><a class="link blue" data-toggle="modal" data-target="#myModal">заказать обратный звонок</a></div>
+			<!-- окно для обратного звонка  -->
+			<div class="modal fade" id="myModal" role="dialog">
+			  <div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content" style="margin: 0 auto; width: 400px;">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Заказать обратный звонок</h4>
+				  </div>
+				  <div class="modal-body">
+					  <p><input placeholder="Ваше имя"></p>
+					  <p><input placeholder="Телефон"></p>
+					  <p><textarea placeholder="Дополнительная информация"></textarea></p>
+					  <p><button>Перезвоните мне</button></p>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
 			<div class="phone">+7 (953) 002–06–23</div>
 			<div class="phone">+7 (953) 002–06–23</div>
 		</div>
@@ -92,7 +105,19 @@
 		</div>
 	</div>
 	
+	</div>
 	
+	<div id="menu-wrapper">
+		<div id="menu">
+		<ul>
+			<li><a href="<?=HTTP_SERVER?>">главная</a></li>
+			<?php foreach ($informations as $information) { ?>
+			<li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+			<?php } ?>
+			<li><a href="<?php echo $contact; ?>">обратная связь</a></li>
+		</ul>
+		</div>
+	</div>
 
 <?php /*
 <nav id="top">

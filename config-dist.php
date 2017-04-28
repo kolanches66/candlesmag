@@ -6,11 +6,9 @@ $DB_USER = 'root';
 $DB_PASS = '';
 $DB_NAME = 'opencart';
 
-// HTTP
-define('HTTP_SERVER', 'http://localhost/opencart/');
-
-// HTTPS
-define('HTTPS_SERVER', 'http://localhost/opencart/');
+// HTTP, HTTPS
+define('HTTP_SERVER', $SITE_ADDRESS);
+define('HTTPS_SERVER', $SITE_ADDRESS);
 
 // DIR
 define('DIR_APPLICATION', $SITE_ROOT.'catalog/');

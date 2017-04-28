@@ -64,7 +64,7 @@
 	<div id="header-wrapper" class="clearfix">
 		<div class="header-wrapper--left">
 			<div class="logo">
-				<a href="<?=HTTP_SERVER?>"><img src="<?=HTTP_SERVER?>image/logo.png"></a>
+				<a href="<?=HTTP_SERVER?>"><img src="<?=HTTP_SERVER?>image/catalog/logo.png"></a>
 			</div>
 		</div>
 		<div class="header-wrapper--center">

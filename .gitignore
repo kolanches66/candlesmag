@@ -1,0 +1,46 @@
+# Config and Htaccess Files
+.htaccess
+config.php
+/admin/config.php
+
+# Image File
+!/image/no_image.jpg
+
+# Image Cache Files
+/image/cache/*
+!/image/cache/index.html
+
+# Images of Products
+/image/catalog/products/*
+!/image/catalog/products/index.html
+
+# System Cache Files
+/system/storage/cache/*
+!/system/storage/cache/index.html
+
+# Modification Files
+/system/storage/modification/*
+!/system/storage/modification/index.html
+
+# Templates Files
+/image/templates/*
+/image/templates/default.jpg
+
+# Download Files
+/system/storage/download/*
+!/system/storage/download/index.html
+
+# Upload Files
+/system/storage/*
+!/system/storage/index.html
+
+# Log Files
+/system/storage/logs/*
+!/system/storage/logs/index.html
+
+# Ignore all vendor files included by composer and the lock file
+/vendor/*
+
+# IDE Project files, NetBeans Project files
+.idea
+nbproject/

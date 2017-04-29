@@ -47,8 +47,8 @@
 !/system/storage/modification/index.html
 
 # Upload Files
-/system/storage/*
-!/system/storage/index.html
+/system/storage/upload/*
+!/system/storage/upload/index.html
 
 
 

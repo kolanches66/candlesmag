@@ -1,10 +1,16 @@
 # Config and Htaccess Files
-.htaccess
-config.php
+/.htaccess
+/config.php
 /admin/config.php
 
+
+
+#-------------------#
+#      image/       #
+#-------------------#
+
 # Image File
-!/image/no_image.jpg
+!/image/no_image.png
 
 # Image Cache Files
 /image/cache/*
@@ -14,29 +20,41 @@ config.php
 /image/catalog/products/*
 !/image/catalog/products/index.html
 
-# System Cache Files
-/system/storage/cache/*
-!/system/storage/cache/index.html
-
-# Modification Files
-/system/storage/modification/*
-!/system/storage/modification/index.html
-
 # Templates Files
 /image/templates/*
 /image/templates/default.jpg
 
-# Download Files
-/system/storage/download/*
-!/system/storage/download/index.html
+
+
+#-------------------#
+#  system/storage/  #
+#-------------------#
 
 # Upload Files
 /system/storage/*
 !/system/storage/index.html
 
+# System Cache Files
+/system/storage/cache/*
+!/system/storage/cache/index.html
+
+# Download Files
+/system/storage/download/*
+!/system/storage/download/index.html
+
 # Log Files
 /system/storage/logs/*
 !/system/storage/logs/index.html
+
+# Modification Files
+/system/storage/modification/*
+!/system/storage/modification/index.html
+
+
+
+#-------------------#
+#    other files    #
+#-------------------#
 
 # Ignore all vendor files included by composer and the lock file
 /vendor/*

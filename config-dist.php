@@ -2,9 +2,13 @@
 
 $SITE_ADDRESS = 'http://localhost/candlesmag/';
 $SITE_ROOT = 'C:/wamp/www/candlesmag/';
+
+$DB_HOST = 'localhost';
 $DB_USER = 'root';
 $DB_PASS = '';
-$DB_NAME = 'opencart';
+$DB_NAME = 'candlesmag';
+$DB_PORT = '3306';
+$DB_PREFIX = 'oc_';
 
 // HTTP, HTTPS
 define('HTTP_SERVER', $SITE_ADDRESS);
@@ -25,9 +29,9 @@ define('DIR_UPLOAD', $SITE_ROOT.'system/storage/upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'localhost');
+define('DB_HOSTNAME', $DB_HOST);
 define('DB_USERNAME', $DB_USER);
 define('DB_PASSWORD', $DB_PASS);
 define('DB_DATABASE', $DB_NAME);
-define('DB_PORT', '3306');
-define('DB_PREFIX', 'oc_');
+define('DB_PORT', $DB_PORT);
+define('DB_PREFIX', $DB_PREFIX);

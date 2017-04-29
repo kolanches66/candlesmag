@@ -30,10 +30,6 @@
 #  system/storage/  #
 #-------------------#
 
-# Upload Files
-/system/storage/*
-!/system/storage/index.html
-
 # System Cache Files
 /system/storage/cache/*
 !/system/storage/cache/index.html
@@ -49,6 +45,10 @@
 # Modification Files
 /system/storage/modification/*
 !/system/storage/modification/index.html
+
+# Upload Files
+/system/storage/*
+!/system/storage/index.html
 
 
 
